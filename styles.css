@@ -1,0 +1,229 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('images/background.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100%;
+    font-family: 'Poppins', Arial, sans-serif;
+    padding-top: 70px;
+    overflow-y: auto;
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.navbar h1 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(173, 216, 230, 0.6);
+}
+
+/* Estilo do carrossel */
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    margin-top: 90px;
+    border-radius: 10px;
+    text-align: center;
+    touch-action: none; /* Permite o swipe */
+}
+
+/* Ajuste do carrossel para as imagens não saírem da área da div */
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    border: 1px solid #001f3f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 31, 63, 0.5);
+}
+
+/* Ajuste para as imagens ocuparem toda a largura e altura do carrossel */
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Indicadores (bolinhas) */
+.indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 1em;
+    height: 1em;
+    margin: 0 0.3em;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+/* Traços */
+.underline {
+    width: 50%;
+    height: 2px;
+    background-color: rgb(171, 141, 141);
+    margin: 20px auto;
+}
+
+/* Contador */
+.counter {
+    margin-top: 20px;
+    font-size: x-large;
+}
+
+#ilovecounter {
+    color: rgb(255, 0, 0);
+    font-weight: 800;
+}
+
+.heart {
+    font-size: 3rem;
+    color: rgb(255, 0, 0);
+}
+
+/* Ajuste geral de layout */
+.names h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.text1, .text2 {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.textfinal h2 {
+    font-size: 1.8rem;
+    color: rgb(255, 0, 0);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel {
+        width: 100%;
+        margin-top: 130px;
+    }
+    .carousel-images img {
+        object-fit: cover;
+    }
+    .youtube-embed {
+        width: 100%;
+        height: 400px;
+    }
+    .navbar h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Garantir centralização no celular */
+body {
+    text-align: center;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 320px) {
+    .carousel-container {
+        padding: 10px; /* Adiciona um pouco de padding nas laterais */
+    }
+
+    .carousel-images {
+        width: 100%;
+    }
+
+    .carousel-images img {
+        width: 100%;
+        height: auto;
+    }
+
+    .dots {
+        bottom: 5px; /* Ajuste a posição dos indicadores */
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+        margin: 0 3px;
+    }
+
+    #timeCounter {
+        font-size: 12px; /* Ajuste o tamanho da fonte para a contagem de tempo */
+    }
+}
+    
